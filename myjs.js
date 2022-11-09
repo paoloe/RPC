@@ -8,6 +8,11 @@ function getComputerChoice(){
     return choices[random];
 }
 
+function getUserChoice(){
+    const input = prompt("Rock Paper Scissors?");
+    alert(`Your selection is ${input}`);
+}
+
 function playRound(playerSelection, userSelection){
 
 }
