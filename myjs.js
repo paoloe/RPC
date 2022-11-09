@@ -3,9 +3,18 @@
 // output winner
 
 function getComputerChoice(){
+    var choices = ['rock', 'paper', 'scissors'];
+    const random = Math.floor(Math.random() * choices.length);
+    return choices[random];
+}
+
+function playRound(playerSelection, userSelection){
 
 }
 
-function results(playerSelection, userSelection){
-    
+function game(){
+    var winner;
+    for(let i = 0; i < 5; i++){
+        winner = playRound(playerSelection, computerSelection);
+    }
 }
