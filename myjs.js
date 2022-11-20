@@ -10,11 +10,38 @@ function getComputerChoice(){
 
 function getUserChoice(){
     const input = prompt("Rock Paper Scissors?");
-    alert(`Your selection is ${input}`);
+    return input;
 }
 
-function playRound(playerSelection, userSelection){
+function playRound(playerSelection, compSelection){
+    // how many scenarios? 
+    // paper beats rock
+    // rock beats scissors
+    // scissors beat paper
 
+    if(playerSelection == compSelection){
+        return 'draw';
+    } else if(playerSelection == 'rock'){
+        if(compSelection == 'paper'){
+            return 'Computer Wins';
+        }
+        else{
+            return 'User Wins';
+        }
+    } else if(playerSelection == 'paper'){
+        if(compSelection == 'rock'){
+            return 'user wins';
+        }else{
+            return 'computer wins';
+        }
+    } else if(playerSelection == 'scissors'){
+        if(compSelection == 'paper'){
+            return 'user wins';
+        }
+        else{
+            return 'computer wins';
+        }
+    }
 }
 
 function game(){
